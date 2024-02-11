@@ -1,15 +1,13 @@
 import { useState } from "react";
 import Home from "./pages/Home";
+import CartProduct from "./components/Fragments/CartProduct";
 
 
 function App(){
     return (
         <div>
             <Home></Home>
-            <section className="p-0 m-0">
-                <h2>Best Seller In Product</h2>
-                <input type="text" placeholder="Search in Favorite Product"/>
-            </section>
+            <CartProduct></CartProduct>
         </div>
     )
 }
