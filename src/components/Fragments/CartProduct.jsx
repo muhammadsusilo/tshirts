@@ -39,7 +39,7 @@ const FooterProduct = (props) =>{
     return (
         <div className="flex justify-between items-center px-5 pb-5 ">
             <span className="text-xl font-bold text-black">Rp.{price}</span>
-            <Button name="Add To cart"> </Button>
+            <Button>Add To Cart</Button>
         </div>
     )
 }

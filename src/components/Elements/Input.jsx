@@ -14,7 +14,7 @@ const LabelInput = (props) => {
    return (
       <div className="my-3 flex flex-col">
          <label htmlFor={name}>{label}</label>
-         <input  className="px-3 py-2 border-slate-950"
+         <input  className="px-3 py-2 border-slate-800"
          type={type} id={name} name={name} placeholder={placeholder} 
          />
       </div>
@@ -25,7 +25,11 @@ const Textarea =() => {
    return (
       <div className="my-3 flex flex-col mb-6">
          <label htmlFor="textarea">Textarea Suggestion</label>
-         <textarea name="Textarea" id="textarea" cols="40" rows="5"></textarea>
+         <textarea 
+         className="border-solid border-slate-800"
+         name="Textarea" id="textarea" cols="40" rows="5">
+
+         </textarea>
       </div>
    )
 }
