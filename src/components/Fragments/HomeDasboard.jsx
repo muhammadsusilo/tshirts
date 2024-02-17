@@ -1,3 +1,4 @@
+import HandleClick from "../Elements/Button";
 import Button from "../Elements/Button"
 
 function HomeDasboard(props){
@@ -8,17 +9,16 @@ function HomeDasboard(props){
        </div>
    )
 }
-
 function NavBar(){
    return (
     <nav className="flex justify-around items-center py-4 bg-slate-300 shadow-slate-700">
       <div className="text-2xl uppercase">Tshirt<span>s.</span> </div>
       <ul className="flex gap-5">
       <li >
-         <a href="#">Home</a>
+         <a href="">Home</a>
       </li>
       <li>
-         <a href="#">Product</a>
+         <a href="/Product.jsx">Product</a>
       </li>
       <li>
          <a href="#">Contact</a>
@@ -27,7 +27,8 @@ function NavBar(){
          <a href="#">About</a>
       </li>      
       </ul>
-      <Button>Login</Button>
+      {/* <Button type="submit" message="">Login</Button> */}
+      <HandleClick href="../../pages/product.jsx">Login</HandleClick>
     </nav>
    )
 }

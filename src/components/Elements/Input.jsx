@@ -28,7 +28,6 @@ const Textarea =() => {
          <textarea 
          className="border-solid border-slate-800"
          name="Textarea" id="textarea" cols="40" rows="5">
-
          </textarea>
       </div>
    )
