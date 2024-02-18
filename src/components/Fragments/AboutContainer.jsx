@@ -10,7 +10,7 @@ const AboutContainer = (props) => {
 };
 
 const ContactUs = (e) => {
-   window.location.href ="/Contact"
+   window.location.href="/Contact"
 }
 
 

@@ -1,0 +1,15 @@
+li {
+    padding: 5px 9px;
+    font-weight: 500;
+}
+
+li:hover {
+    background-color: rgb(30, 30, 216);
+    border-radius: 10px;
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgb(30, 30, 216);
+    color: #fff;
+}

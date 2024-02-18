@@ -7,7 +7,9 @@ import { allProduct } from "./data";
     const {children} = props;
     return (
         <div>
-            <HomeDasboard.NavBar />
+            <div className=" shadow-lg shadow-slate-400">
+                <HomeDasboard.NavBar />
+            </div>
             <div className="mt-5">
                 <HomeProduct />
             </div>

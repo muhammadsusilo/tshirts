@@ -1,4 +1,5 @@
 import Button from "../Elements/Button";
+import { Link } from "react-router-dom"
 
 function HomeDasboard(props){
    const {children} = props;
@@ -14,20 +15,23 @@ const HandleClick =() => {
    };
 function NavBar(){
    return (
-    <nav className="flex justify-around items-center py-4 bg-slate-300 shadow-slate-700">
-      <div className="text-2xl uppercase"><a href="/">Tshirt<span>s.</span></a></div>
+    <nav 
+    className=
+    "flex justify-around items-center py-4 bg-slate-300"
+    >
+      <div className="text-3xl uppercase font-bold"><a href="/">Tshirt<span>s.</span></a></div>
       <ul className="flex gap-5">
       <li >
-         <a href="/">Home</a>
+         <Link to="/">Home</Link>
       </li>
       <li>
-         <a href="/Product">Product</a>
+         <Link to="/Product">Product</Link>
       </li>
       <li>
-         <a href="/Contact">Contact</a>
+         <Link to="/Contact">Contact</Link>
       </li>
       <li>
-         <a href="/About">About</a>
+         <Link to="/About">About</Link>
       </li>      
       </ul>
       <Button onClick={HandleClick}>Login</Button>
@@ -41,7 +45,7 @@ function Dasboard(){
          <div className="items-center min-h-screen m-5 mt-5 mx-20">
             <h1 className="text-7xl font-bold text-indigo-700 ">Tshirts Store</h1>
             <h2 className="text-6xl"> Welcome to our platform </h2>
-            <p className="text-md my-5">Click to view T-shirts katalog </p>
+            <p className="text-lg my-5">Click to view T-shirts katalog </p>
             <Button onClick={HandleClick}>Catalog</Button>
          </div>
          <div className="img-gambar ">

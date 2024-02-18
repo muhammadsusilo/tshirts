@@ -5,7 +5,9 @@ import HomeDasboard from "../components/Fragments/HomeDasboard";
 const ContactPage = () => {
    return (
       <div>
-         <HomeDasboard.NavBar />
+         <div className=" shadow-lg shadow-slate-400">
+            <HomeDasboard.NavBar />
+         </div>
          <h2 className="text-center py-5 text-4xl font-bold mt-2">If there is the Feedback ?</h2>
          <hr className="mb-5 mx-10" />
          <div className="flex row justify-center gap-7 flex-wrap">
