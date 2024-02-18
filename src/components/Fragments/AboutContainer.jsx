@@ -9,13 +9,17 @@ const AboutContainer = (props) => {
     )
 };
 
+const ContactUs = (e) => {
+   window.location.href ="/Contact"
+}
+
 
 const AboutHeader = ( props ) => {
    return (
          <div>
             <h5 className="text-5xl my-5 font-bold">About Tshirt<span>s.</span></h5>
             <p className="text-xl font-light mb-3">Tshirts adalah website tentang Penjualan untuk Kaos orang dewasa. Tshirts made In Indonesia yang membuat ecommerce modern and menjual product high quality. Yuk Belanja di Tshirts shop </p>
-            <Button>Contact Us</Button>
+            <Button onClick={ContactUs}>Contact Us</Button>
          </div>
    )
 }
