@@ -7,7 +7,7 @@ import ProductPage from "./Product";
         <div>
             <HomeDasboard.NavBar />
             <HomeDasboard.Dasboard />
-            <ProductPage />
+            <ProductPage.HomeProduct />
         </div>
     )
 }
