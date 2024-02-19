@@ -35,7 +35,7 @@ function NavBar(){
          </li>      
       </ul>
       {/* <Button onClick={HandleClick}>Login</Button> */}
-      <Link to="" className="text-3xl"><i class='bx bxs-shopping-bag'></i></Link>
+      <Link to="Shop" className="text-3xl"><i class='bx bxs-shopping-bag'></i></Link>
     </nav>
    )
 }

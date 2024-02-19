@@ -14,7 +14,7 @@ const ContactUs = (e) => {
 }
 
 
-const AboutHeader = ( props ) => {
+const AboutHeader = () => {
    return (
          <div>
             <h5 className="text-5xl my-5 font-bold">About Tshirt<span>s.</span></h5>
