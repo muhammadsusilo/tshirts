@@ -3,7 +3,7 @@ import Button from "../Elements/Button/";
 const CartProduct = (props) => {
     const {children} = props;
     return (
-        <div className="  w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow my-5">
+        <div className="w-full max-w-xs  border border-slate-200 rounded-lg shadow-md shadow-slate-200 my-5">
             {children}
         </div>
     )
@@ -37,9 +37,9 @@ const  BodyProduct = (props) => {
 const FooterProduct = (props) =>{
     const {price} = props;
     return (
-        <div className="flex justify-between items-center px-5 pb-5 ">
+        <div className="flex justify-between items-center px-5 pb-5">
             <span className="text-xl font-bold text-black">Rp.{price}</span>
-            <Button>Add To Cart</Button>
+            <Button >Add To Cart</Button>
         </div>
     )
 }

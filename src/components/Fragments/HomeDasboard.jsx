@@ -21,20 +21,21 @@ function NavBar(){
     >
       <div className="text-3xl uppercase font-bold"><a href="/">Tshirt<span>s.</span></a></div>
       <ul className="flex gap-5">
-      <li >
-         <Link to="/">Home</Link>
-      </li>
-      <li>
-         <Link to="/Product">Product</Link>
-      </li>
-      <li>
-         <Link to="/Contact">Contact</Link>
-      </li>
-      <li>
-         <Link to="/About">About</Link>
-      </li>      
+         <li >
+            <Link to="/">Home</Link>
+         </li>
+         <li>
+            <Link to="/Product">Product</Link>
+         </li>
+         <li>
+            <Link to="/Contact">Contact</Link>
+         </li>
+         <li>
+            <Link to="/About">About</Link>
+         </li>      
       </ul>
-      <Button onClick={HandleClick}>Login</Button>
+      {/* <Button onClick={HandleClick}>Login</Button> */}
+      <Link to="" className="text-3xl"><i class='bx bxs-shopping-bag'></i></Link>
     </nav>
    )
 }
@@ -46,7 +47,7 @@ function Dasboard(){
             <h1 className="text-7xl font-bold text-indigo-700 ">Tshirts Store</h1>
             <h2 className="text-6xl"> Welcome to our platform </h2>
             <p className="text-lg my-5">Click to view T-shirts katalog </p>
-            <Button onClick={HandleClick}>Catalog</Button>
+            <Button onClick={HandleClick} color="bg-blue-500">Catalog</Button>
          </div>
          <div className="img-gambar ">
             <img className="h-screen object-cover" src="./public/img/gambar1.jpg" alt="Tshirts" />

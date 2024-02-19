@@ -1,8 +1,8 @@
  export default function Button(props){
-    const {children, color = "bg-slate-700", onClick, type ="button"} = props;
+    const {children, color ="bg-slate-500", onClick, type ="button"} = props;
     return (
         <button 
-        className={`${color} px-5 h-10 rounded-lg text-white shadow-lg`}
+        className={`${color} px-5 h-10 rounded-lg text-white  shadow shadow-slate-600`}
         type={type}
 
         onClick={() => onClick()}

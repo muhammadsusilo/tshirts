@@ -19,7 +19,7 @@ const AboutHeader = ( props ) => {
          <div>
             <h5 className="text-5xl my-5 font-bold">About Tshirt<span>s.</span></h5>
             <p className="text-xl font-light mb-3">Tshirts adalah website tentang Penjualan untuk Kaos orang dewasa. Tshirts made In Indonesia yang membuat ecommerce modern and menjual product high quality. Yuk Belanja di Tshirts shop </p>
-            <Button onClick={ContactUs}>Contact Us</Button>
+            <Button onClick={ContactUs} color="bg-blue-500">Contact Us</Button>
          </div>
    )
 }

@@ -22,7 +22,7 @@ const ContactPage = () => {
                <InputFrom.LabelInput
                label= "Email Addres" type="email" name="Email" placeholder="andika@gmail.com" />
                <InputFrom.Textarea />
-               <Button>Submit</Button>
+               <Button color="bg-blue-500">Submit</Button>
             </div>
          </div>
       </div>
