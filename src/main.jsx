@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import "./style.css"
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/Home.jsx'
 import ProductPage from './pages/Product.jsx'
 import ContactPage from './pages/Contact.jsx'

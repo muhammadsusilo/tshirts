@@ -51,30 +51,7 @@ const FooterProduct = (props) =>{
 const ShopProduct = () => {
     return (
         <div className="flex justify-center items-center min-h-screen">
-            <figure class="md:flex bg-slate-400 rounded-xl p-8">
-            <img 
-            className="object-cover"
-            class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" 
-            src="https://img.freepik.com/premium-vector/coding-programming-concept-women-working-laptop-mobile-screen-developing-programs-technologies-cartoon-developers-doing-tasks-coding-software-devices-vector-illustration_461812-1267.jpg?w=740" 
-            alt="" width="384" height="512"
-            />
-            <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-                <blockquote>
-                    <p class="text-lg font-medium">
-                        Fitur ini masih dalam Pengembangan <br />
-                        Mohon di tunggu, Terima Kasih
-                    </p>
-                </blockquote>
-                <figcaption class="font-medium bg-slate-500 px-5 py-8 rounded-md">
-                    <div class="text-white-900  ">
-                        Muhammad Susilo
-                    </div>
-                    <div class="text-slate-700 ">
-                        FrontEnd Developer
-                    </div>
-                </figcaption>
-            </div>
-            </figure>
+            <p>Cart</p>
         </div>
     )
 };
