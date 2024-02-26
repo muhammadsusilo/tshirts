@@ -3,16 +3,15 @@ import Button from "../Elements/Button";
 const AboutContainer = (props) => {
    const {children} = props;
     return (
-      <div className="px-28 py-14 flex justify-center items-center gap-5">
+      <div className="px-28 md:px-4 py-14 flex justify-center items-center gap-5">
          {children}
       </div>
     )
 };
 
-const ContactUs = (e) => {
+const ContactUs = () => {
    window.location.href="/Contact";
 }
-
 
 const AboutHeader = () => {
    return (

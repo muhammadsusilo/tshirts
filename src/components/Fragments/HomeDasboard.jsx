@@ -19,7 +19,12 @@ function NavBar(){
     className=
     "flex justify-around items-center py-4 bg-slate-300"
     >
-      <div className="text-3xl uppercase font-bold"><a href="/">Tshirt<span>s.</span></a></div>
+      <div className=" flex items-center gap-2 text-xl uppercase">
+         <Button color="bg-slate-400" > 
+            X
+         </Button >
+         <Link to="/">Tshirt<span>s.</span></Link>
+      </div>
       <ul className="flex gap-5">
          <li >
             <Link to="/">Home</Link>
@@ -40,6 +45,39 @@ function NavBar(){
    )
 }
 
+function NavBarMobile(){
+   return (
+      <nav 
+    className=
+    "flex flex-col bg-slate-300"
+    >
+      <div className="text-2xl uppercase font-bold flex items-center gap-3 my-4 pl-2">
+         <div className="bg-slate-400 rounded-lg p-1 hover:bg-slate-500">
+            <label htmlFor="menu">
+               
+            </label>
+         </div>
+         <Link to="/">Tshirt<span>s.</span></Link>
+      </div>
+      <ul className="navmobile flex justify-around gap-5 px-2 "
+      >
+         <li >
+            <Link to="/">Home</Link>
+         </li>
+         <li>
+            <Link to="/Product">Product</Link>
+         </li>
+         <li>
+            <Link to="/Contact">Contact</Link>
+         </li>
+         <li>
+            <Link to="/About">About</Link>
+         </li>      
+      </ul>
+    </nav>
+   )
+}
+
 function Dasboard(){
    return (
       <section className="flex justify-between min-h-screen">
@@ -55,7 +93,7 @@ function Dasboard(){
       </section>
    )
 }
-
+HomeDasboard.NavBarMobile = NavBarMobile;
 HomeDasboard.NavBar = NavBar ;
 HomeDasboard.Dasboard = Dasboard ;
 

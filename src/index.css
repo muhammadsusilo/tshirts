@@ -1,3 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+li {
+  padding: 5px 9px;
+  font-weight: 500;
+}
+
+li:hover {
+  background-color: #1d4ed8;
+  border-radius: 10px;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+  color: #fff;
+}
+
+@media (max-width: 450px) {
+  .contactpage h2 {
+    font-size: 1.8rem;
+  }
+  .contactpage .contact {
+    padding: 0 2rem;
+  }
+  .contactpage .contact img {
+    height: 90%;
+  }
+  .aboutpage .about {
+    padding: 1.5rem 2rem 0;
+  }
+}/*# sourceMappingURL=index.css.map */
