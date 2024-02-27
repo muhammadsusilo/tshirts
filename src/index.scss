@@ -15,6 +15,16 @@ button:hover {
 }
 
 @media(max-width:450px) {
+    // navbar 
+    .navbar {
+        flex-wrap: wrap;
+        position: relative;
+        .navlink {
+            position: absolute;
+            flex-direction: column;
+            background-color: ;
+        }
+    }
     // contact
     .contactpage {
         h2 {
@@ -30,7 +40,16 @@ button:hover {
     //  about
     .aboutpage {
         .about {
-            padding: 1.5rem 2rem 0;
+            padding: 1.5rem 1rem 0;
+            flex-wrap: wrap-reverse;
         }
+    }
+    // productpage
+    .navproduct {
+        padding: 1.5rem 1rem 0;
+        font-size: 1.8rem;
+    }
+    .productpage {
+        padding: 1.5rem 1rem 0;
     }
 }

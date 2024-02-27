@@ -19,7 +19,7 @@ import { allProduct } from "./data";
 
 function HomeProduct(){
     return (
-        <section className="mx-20 min-h-screen mt-5">
+        <section className="productpage mx-20 min-h-screen mt-5">
                 <NavProduct />
                 <div className="flex gap-7 flex-wrap justify-center">
                     {allProduct.map((products) => (

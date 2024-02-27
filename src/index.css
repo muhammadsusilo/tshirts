@@ -15,6 +15,14 @@ button:hover {
 }
 
 @media (max-width: 450px) {
+  .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .navbar .navlink {
+    position: absolute;
+    flex-direction: column;
+  }
   .contactpage h2 {
     font-size: 1.8rem;
   }
@@ -25,6 +33,14 @@ button:hover {
     height: 90%;
   }
   .aboutpage .about {
-    padding: 1.5rem 2rem 0;
+    padding: 1.5rem 1rem 0;
+    flex-wrap: wrap-reverse;
+  }
+  .navproduct {
+    padding: 1.5rem 1rem 0;
+    font-size: 1.8rem;
+  }
+  .productpage {
+    padding: 1.5rem 1rem 0;
   }
 }/*# sourceMappingURL=index.css.map */

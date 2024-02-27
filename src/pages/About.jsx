@@ -7,7 +7,7 @@ const AboutPage = () => {
          <div className=" shadow-lg shadow-slate-400">
             <HomeDasboard.NavBar />
          </div>
-         <div className="about px-28 py-14 flex flex-wrap-reverse justify-center items-center gap-9">
+         <div className="about px-28 py-14 flex flex-row justify-center items-center gap-9">
             <AboutContainer.AboutHeader/>
             <AboutContainer.AboutFooter />
          </div>

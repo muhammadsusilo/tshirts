@@ -17,63 +17,29 @@ function NavBar(){
    return (
     <nav 
     className=
-    "flex justify-around items-center py-4 bg-slate-300"
+    "navbar flex justify-evenly items-center py-4 bg-slate-300"
     >
-      <div className=" flex items-center gap-2 text-xl uppercase">
-         <Button color="bg-slate-400" > 
+      <div className="text-3xl font-bold uppercase">
+         {/* <Button color="bg-slate-400" > 
             X
-         </Button >
+         </Button > */}
          <Link to="/">Tshirt<span>s.</span></Link>
       </div>
-      <ul className="flex gap-5">
-         <li >
-            <Link to="/">Home</Link>
-         </li>
-         <li>
-            <Link to="/Product">Product</Link>
-         </li>
-         <li>
-            <Link to="/Contact">Contact</Link>
-         </li>
-         <li>
-            <Link to="/About">About</Link>
-         </li>      
+      <ul className="navlink flex gap-5">
+            <li >
+               <Link to="/">Home</Link>
+            </li>
+            <li>
+               <Link to="/Product">Product</Link>
+            </li>
+            <li>
+               <Link to="/Contact">Contact</Link>
+            </li>
+            <li>
+               <Link to="/About">About</Link>
+            </li>      
       </ul>
-      {/* <Button onClick={HandleClick}>Login</Button> */}
-      <Link to="Shop" className="text-3xl"><i class='bx bxs-shopping-bag'></i></Link>
-    </nav>
-   )
-}
-
-function NavBarMobile(){
-   return (
-      <nav 
-    className=
-    "flex flex-col bg-slate-300"
-    >
-      <div className="text-2xl uppercase font-bold flex items-center gap-3 my-4 pl-2">
-         <div className="bg-slate-400 rounded-lg p-1 hover:bg-slate-500">
-            <label htmlFor="menu">
-               
-            </label>
-         </div>
-         <Link to="/">Tshirt<span>s.</span></Link>
-      </div>
-      <ul className="navmobile flex justify-around gap-5 px-2 "
-      >
-         <li >
-            <Link to="/">Home</Link>
-         </li>
-         <li>
-            <Link to="/Product">Product</Link>
-         </li>
-         <li>
-            <Link to="/Contact">Contact</Link>
-         </li>
-         <li>
-            <Link to="/About">About</Link>
-         </li>      
-      </ul>
+      {/* <Link to="Shop" className="text-3xl"><i class='bx bxs-shopping-bag'></i></Link> */}
     </nav>
    )
 }
