@@ -58,7 +58,20 @@ button:hover {
             // z-index: -1;
         }
     }
-    // contact
+    // product
+    .productpage {
+        margin: 1.5rem 1rem 0;
+        .productpage2 {
+            margin: 0 1rem 0;
+        }
+    }
+    .navproduct {
+        margin-top: 5rem;
+        .navproducth2 {
+            font-size: 1.7rem;
+        }
+    }
+    // contact 
     .contactpage {
         h2 {
             font-size: 1.8rem;
@@ -73,16 +86,10 @@ button:hover {
     //  about
     .aboutpage {
         .about {
-            padding: 1.5rem 1rem 0;
+            margin-top: 1rem;
+            margin: 1.5rem 1rem 0;
             flex-wrap: wrap-reverse;
+            gap: 2;
         }
-    }
-    // productpage
-    .navproduct {
-        padding: 1.5rem 1rem 0;
-        font-size: 1.8rem;
-    }
-    .productpage {
-        padding: 1.5rem 1rem 0;
     }
 }

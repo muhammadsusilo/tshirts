@@ -20,8 +20,8 @@ import { allProduct } from "./data";
 function HomeProduct(){
     return (
         <section className="productpage mx-20 min-h-screen mt-5">
-                <NavProduct />
-                <div className="flex gap-7 flex-wrap justify-center">
+          <NavProduct />
+          <div className="productpage2 flex gap-7 flex-wrap justify-center">
                     {allProduct.map((products) => (
                         <CartProduct key={products.id}>
                             <CartProduct.HeaderProduct image ={products.imageId}/>
@@ -32,8 +32,8 @@ function HomeProduct(){
                         </CartProduct>
                         )
                     )}
-                </div>
-            </section>
+                </div>          
+        </section>
     )
 }
 
