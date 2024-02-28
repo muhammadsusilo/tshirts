@@ -12,35 +12,4 @@ li:hover {
 button:hover {
   background-color: #1d4ed8;
   color: #fff;
-}
-
-@media (max-width: 450px) {
-  .navbar {
-    flex-wrap: wrap;
-    position: relative;
-  }
-  .navbar .navlink {
-    position: absolute;
-    flex-direction: column;
-  }
-  .contactpage h2 {
-    font-size: 1.8rem;
-  }
-  .contactpage .contact {
-    padding: 0 2rem;
-  }
-  .contactpage .contact img {
-    height: 90%;
-  }
-  .aboutpage .about {
-    padding: 1.5rem 1rem 0;
-    flex-wrap: wrap-reverse;
-  }
-  .navproduct {
-    padding: 1.5rem 1rem 0;
-    font-size: 1.8rem;
-  }
-  .productpage {
-    padding: 1.5rem 1rem 0;
-  }
 }/*# sourceMappingURL=index.css.map */
