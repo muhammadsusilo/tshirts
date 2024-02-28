@@ -6,9 +6,8 @@ import ProductPage from "./Product";
     return (
         <div>
             <HomeDasboard.NavBar />
-            {/* <HomeDasboard.NavBarMobile /> */}
-            <HomeDasboard.Dasboard />
-            <ProductPage.HomeProduct />
+            {/* <HomeDasboard.Dasboard /> */}
+            {/* <ProductPage.HomeProduct /> */}
         </div>
     )
 }

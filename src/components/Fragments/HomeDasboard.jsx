@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Button from "../Elements/Button";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 
 function HomeDasboard(props){
    const {children} = props;
@@ -12,34 +14,40 @@ function HomeDasboard(props){
 
 const HandleClick =() => {
    window.location.href ="/Product"
-   };
+};
+
 function NavBar(){
+const [isMobile, setIsmobile] = useState(false)
    return (
     <nav 
     className=
     "navbar flex justify-evenly items-center py-4 bg-slate-300"
     >
-      <div className="text-3xl font-bold uppercase">
-         {/* <Button color="bg-slate-400" > 
-            X
-         </Button > */}
+      <button className="menu mr-5" 
+         onClick={() => setIsmobile(!isMobile)}
+         >
+         {isMobile? <FiX />  : <FiMenu /> }
+      </button>
+      <div className="navheader flex items-center text-3xl font-bold uppercase">
          <Link to="/">Tshirt<span>s.</span></Link>
       </div>
-      <ul className="navlink flex gap-5">
-            <li >
+      <ul className=
+      {isMobile? "navlink" : "navdestop"}
+      onClick={() =>setIsmobile(false)}
+      >
+         <li >
                <Link to="/">Home</Link>
-            </li>
-            <li>
+         </li>
+         <li>
                <Link to="/Product">Product</Link>
-            </li>
-            <li>
+         </li>
+         <li>
                <Link to="/Contact">Contact</Link>
-            </li>
-            <li>
+         </li>
+         <li>
                <Link to="/About">About</Link>
-            </li>      
+         </li>      
       </ul>
-      {/* <Link to="Shop" className="text-3xl"><i class='bx bxs-shopping-bag'></i></Link> */}
     </nav>
    )
 }
@@ -59,7 +67,6 @@ function Dasboard(){
       </section>
    )
 }
-HomeDasboard.NavBarMobile = NavBarMobile;
 HomeDasboard.NavBar = NavBar ;
 HomeDasboard.Dasboard = Dasboard ;
 

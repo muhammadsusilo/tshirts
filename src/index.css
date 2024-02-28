@@ -1,9 +1,12 @@
-li {
+.navdestop {
+  display: flex;
+  gap: 5;
+}
+.navdestop li {
   padding: 5px 9px;
   font-weight: 500;
 }
-
-li:hover {
+.navdestop li :hover {
   background-color: #1d4ed8;
   border-radius: 10px;
   color: #fff;
@@ -14,14 +17,43 @@ button:hover {
   color: #fff;
 }
 
-@media (max-width: 450px) {
+.menu {
+  display: none;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+@media (max-width: 500px) {
+  .menu {
+    display: block;
+  }
+  .navdestop {
+    display: none;
+  }
   .navbar {
-    flex-wrap: wrap;
-    position: relative;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 5px 5px 5px rgb(203, 213, 225);
+  }
+  .navbar .navheader {
+    justify-content: space-between;
   }
   .navbar .navlink {
+    margin-top: 1rem;
+    display: flex;
     position: absolute;
     flex-direction: column;
+    justify-content: space-evenly;
+    top: 1rem;
+    left: 0;
+    width: 10rem;
+    height: 30vh;
+    background-color: rgb(203, 213, 225);
+    align-items: center;
+    border-radius: 15px;
   }
   .contactpage h2 {
     font-size: 1.8rem;
