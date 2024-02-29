@@ -21,7 +21,7 @@ const [isMobile, setIsmobile] = useState(false)
    return (
     <nav 
     className=
-    "navbar flex justify-evenly items-center py-4 bg-slate-300"
+    "navbar flex justify-evenly items-center py-4 bg-blue-400"
     >
       <button className="menu mr-5" 
          onClick={() => setIsmobile(!isMobile)}
@@ -54,15 +54,15 @@ const [isMobile, setIsmobile] = useState(false)
 
 function Dasboard(){
    return (
-      <section className="flex justify-between min-h-screen">
-         <div className="items-center min-h-screen m-5 mt-5 mx-20">
-            <h1 className="text-7xl font-bold text-indigo-700 ">Tshirts Store</h1>
-            <h2 className="text-6xl"> Welcome to our platform </h2>
-            <p className="text-lg my-5">Click to view T-shirts katalog </p>
+      <section className="dasboard flex justify-between min-h-screen ">
+         <div className="hometext my-5 mx-20">
+            <h1 className="hometexth1 text-7xl font-bold text-indigo-700 ">Tshirts Store</h1>
+            <h2 className="hometexth2 text-6xl"> Welcome to our platform </h2>
+            <p className="hometextp text-lg my-5">Click to view T-shirts katalog </p>
             <Button onClick={HandleClick} color="bg-blue-500">Catalog</Button>
          </div>
-         <div className="img-gambar ">
-            <img className="h-screen object-cover" src="./public/img/gambar1.jpg" alt="Tshirts" />
+         <div className="img-gambar">
+            <img className=" h-screen object-cover" src="./public/img/gambar1.jpg" alt="Tshirts" />
          </div>    
       </section>
    )

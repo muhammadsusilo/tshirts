@@ -2,14 +2,17 @@
   display: flex;
   gap: 5;
 }
-.navdestop li {
-  padding: 5px 9px;
+
+li {
   font-weight: 500;
+  margin-left: 2rem;
+  padding: 5px 9px;
 }
-.navdestop li :hover {
+li :hover {
   background-color: #1d4ed8;
   border-radius: 10px;
   color: #fff;
+  padding: 5px 9px;
 }
 
 button:hover {
@@ -51,9 +54,37 @@ button:hover {
     left: 0;
     width: 10rem;
     height: 30vh;
-    background-color: rgb(203, 213, 225);
+    background-color: rgb(96, 165, 250);
     align-items: center;
     border-radius: 15px;
+  }
+  .dasboard {
+    flex-wrap: wrap-reverse;
+  }
+  .dasboard .hometext {
+    margin: 0 4rem;
+  }
+  .dasboard .hometext .hometexth1 {
+    font-size: 3rem;
+  }
+  .dasboard .hometext .hometexth2 {
+    font-size: 2.5rem;
+  }
+  .dasboard .img-gambar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .dasboard .img-gambar img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    margin: 4rem 0 0rem;
+    border-radius: 5px;
   }
   .productpage {
     margin: 1.5rem 1rem 0;
@@ -66,6 +97,9 @@ button:hover {
   }
   .navproduct .navproducth2 {
     font-size: 1.7rem;
+  }
+  .navproduct input {
+    margin: 0 4rem;
   }
   .contactpage h2 {
     font-size: 1.8rem;
