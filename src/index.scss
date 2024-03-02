@@ -27,7 +27,12 @@ button:hover {
     z-index: 2;
 }
 
-@media(max-width: 500px) {
+.img-gambar>img {
+    width: 950px;
+    height: 750px;
+}
+
+@media(max-width: 450px) {
     // navbar 
     .menu {
         display: block;
@@ -64,8 +69,13 @@ button:hover {
     // home dasboard 
     .dasboard {
         flex-wrap: wrap-reverse;
+        margin: 0 2rem;
         .hometext {
-            margin: 0 4rem;
+            // margin: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
             .hometexth1 {
                 font-size: 3rem;
             }
@@ -83,8 +93,8 @@ button:hover {
                 height: 300px;
                 object-fit: cover;
                 object-position: center;
-                margin: 4rem 0 0rem;
                 border-radius: 5px;
+                margin: 7rem 0 2rem;
             }
         }
     }
@@ -119,10 +129,14 @@ button:hover {
     //  about
     .aboutpage {
         .about {
-            margin-top: 1rem;
-            margin: 1.5rem 1rem 0;
+            padding: 0;
+            margin: 0 1rem;
             flex-wrap: wrap-reverse;
             gap: 2;
         }
+    }
+    .about_img {
+        margin-top: 5rem;
+        width: 350px;
     }
 }

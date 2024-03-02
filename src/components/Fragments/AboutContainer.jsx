@@ -3,7 +3,7 @@ import Button from "../Elements/Button";
 const AboutContainer = (props) => {
    const {children} = props;
     return (
-      <div className="px-28 md:px-4 py-14 flex justify-center items-center gap-5">
+      <div>
          {children}
       </div>
     )
@@ -27,6 +27,7 @@ const AboutFooter =() => {
    return (
       <div>
          <img 
+         className="about_img"
             src="https://cdn.dribbble.com/userupload/9932397/file/original-2870d25f5d7ae057d0de88173ee8249b.jpg?resize=1100x1000&vertical=center" 
             alt="About" 
             />
