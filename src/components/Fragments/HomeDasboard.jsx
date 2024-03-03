@@ -29,7 +29,7 @@ const [isMobile, setIsmobile] = useState(false)
          {isMobile? <FiX />  : <FiMenu /> }
       </button>
       <div className="navheader flex items-center text-3xl font-bold uppercase">
-         <Link to="/">Tshirt<span>s.</span></Link>
+         <Link to="/">Tshirt<span> Shop</span></Link>
       </div>
       <ul className=
       {isMobile? "navlink" : "navdestop"}
@@ -63,7 +63,7 @@ function Dasboard(){
                <Button onClick={HandleClick} color="bg-blue-500">Catalog</Button>
             </div>
          </div>
-         <div className="img-gambar">
+         <div className="img-gambar" data-aos="fade-down">
             <img className=" object-cover" src="./public/img/gambar1.jpg" alt="Tshirts" />
          </div>    
       </section>

@@ -26,6 +26,10 @@ button:hover {
   z-index: 2;
 }
 
+.about-footer img {
+  width: 900px;
+}
+
 .img-gambar > img {
   width: 950px;
   height: 750px;
@@ -101,10 +105,8 @@ button:hover {
   .productpage .productpage2 {
     margin: 0 1rem 0;
   }
-  .navproduct {
-    margin-top: 5rem;
-  }
   .navproduct .navproducth2 {
+    margin-top: 5rem;
     font-size: 1.7rem;
   }
   .navproduct input {
@@ -125,8 +127,7 @@ button:hover {
     flex-wrap: wrap-reverse;
     gap: 2;
   }
-  .about_img {
-    margin-top: 5rem;
-    width: 350px;
+  .about-footer img {
+    margin-top: 6rem;
   }
 }/*# sourceMappingURL=index.css.map */

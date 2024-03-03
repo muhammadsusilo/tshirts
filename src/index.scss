@@ -27,6 +27,11 @@ button:hover {
     z-index: 2;
 }
 
+.about-footer img {
+    width: 900px;
+    // height: 400px;
+}
+
 .img-gambar>img {
     width: 950px;
     height: 750px;
@@ -63,7 +68,6 @@ button:hover {
             background-color: rgb(96 165 250);
             align-items: center;
             border-radius: 15px;
-            // z-index: -1;
         }
     }
     // home dasboard 
@@ -106,8 +110,8 @@ button:hover {
         }
     }
     .navproduct {
-        margin-top: 5rem;
         .navproducth2 {
+            margin-top: 5rem;
             font-size: 1.7rem;
         }
         input {
@@ -135,8 +139,7 @@ button:hover {
             gap: 2;
         }
     }
-    .about_img {
-        margin-top: 5rem;
-        width: 350px;
+    .about-footer img {
+        margin-top: 6rem;
     }
 }
