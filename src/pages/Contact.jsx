@@ -1,32 +1,17 @@
 
 import InputFrom from "../components/Elements/Input";
 import HomeDasboard from "../components/Fragments/HomeDasboard";
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-
+import React from 'react';
+import {useFormik} from 'formik';
 
 const ContactPage = () => {
-   const form = useRef();
+   const formik = useFormik({});
+   console.info(formik);
 
-   const HandleAbout = () =>{
-      
-   }
 
-   const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm("service_yu53vcb","template_ltyjpfe", form.current, {
-      publicKey:"OLBtCJ2If6lUW2SUx",
-    })
-    .then(
-      ()=>{
-         `${console.log("Terima Kasih")}`
-      },
-      (er)=>{
-         `${console.log("Silahkan Ulangi")}`
-      }
-    );
-   }
+   // intial values
+   // validation shema
+   // handle submission
 
    return (
       <div className="contactpage">
@@ -42,7 +27,7 @@ const ContactPage = () => {
                   alt="Contact Tshirts" />
             </div>
             <div className="flex flex-col">
-               <form ref={form} onSubmit={sendEmail}>
+               <form>
                   <InputFrom.LabelInput
                   label= "Fullname" type="text" name="fullname" placeholder="Andika Saputra" />
                   <InputFrom.LabelInput
