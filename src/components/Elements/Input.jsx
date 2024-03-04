@@ -1,11 +1,12 @@
+import { Fragment } from "react";
 import Button from "./Button"
 
 const InputFrom = (props) => {
    const {children} = props;
    return (
-      <div className="">
-         {children}
-      </div>
+         <div>
+            {children}
+         </div>
    )
 }
 
@@ -27,7 +28,7 @@ const Textarea =() => {
          <label htmlFor="textarea" className="font-medium">Textarea Suggestion</label>
          <textarea 
          className="px-3 py-2 border border-slate-500 rounded outline-blue-400"
-         name="Textarea" id="textarea" cols="40" rows="5">
+         name="message" id="textarea" cols="40" rows="5">
          </textarea>
       </div>
    )

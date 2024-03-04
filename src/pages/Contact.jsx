@@ -1,8 +1,33 @@
-import Button from "../components/Elements/Button";
+
 import InputFrom from "../components/Elements/Input";
 import HomeDasboard from "../components/Fragments/HomeDasboard";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 const ContactPage = () => {
+   const form = useRef();
+
+   const HandleAbout = () =>{
+      
+   }
+
+   const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_yu53vcb","template_ltyjpfe", form.current, {
+      publicKey:"OLBtCJ2If6lUW2SUx",
+    })
+    .then(
+      ()=>{
+         `${console.log("Terima Kasih")}`
+      },
+      (er)=>{
+         `${console.log("Silahkan Ulangi")}`
+      }
+    );
+   }
+
    return (
       <div className="contactpage">
          <div className=" shadow-lg shadow-slate-400">
@@ -17,12 +42,17 @@ const ContactPage = () => {
                   alt="Contact Tshirts" />
             </div>
             <div className="flex flex-col">
-               <InputFrom.LabelInput
-               label= "Fullname" type="text" name="fullname" placeholder="Andika Saputra" />
-               <InputFrom.LabelInput
-               label= "Email Addres" type="email" name="Email" placeholder="andika@gmail.com" />
-               <InputFrom.Textarea />
-               <Button color="bg-blue-500">Submit</Button>
+               <form ref={form} onSubmit={sendEmail}>
+                  <InputFrom.LabelInput
+                  label= "Fullname" type="text" name="fullname" placeholder="Andika Saputra" />
+                  <InputFrom.LabelInput
+                  label= "Email Addres" type="email" name="Email" placeholder="andika@gmail.com" />
+                  <InputFrom.Textarea />
+                  <button color="bg-blue-500" type="submit"
+                  >
+                     Submit
+                  </button>
+               </form>
             </div>
          </div>
       </div>
