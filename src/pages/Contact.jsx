@@ -1,38 +1,61 @@
-
 import InputFrom from "../components/Elements/Input";
 import HomeDasboard from "../components/Fragments/HomeDasboard";
 import React from 'react';
 import {useFormik} from 'formik';
+import * as Yup from "yup";
+import ContactBox from "../components/Fragments/ContactBox";
 
 const ContactPage = () => {
-   const formik = useFormik({});
-   console.info(formik);
-
-
-   // intial values
+   const formik = useFormik({
+   // initial values
+   initialValues:{
+      fullname:``,
+      email:``,
+      textarea:``
+   },
+   
    // validation shema
+   validationSchema:Yup.object({
+      fullname:Yup.string()
+      .required(),
+      email:Yup.string()
+      .required(),
+      textarea:Yup.string()
+      .required(),
+   }),
+
    // handle submission
+   onSubmit:(values) =>{
+      console.info("form values",values);
+   }
+   });
+
+// console.info(formik);
 
    return (
       <div className="contactpage">
          <div className=" shadow-lg shadow-slate-400">
             <HomeDasboard.NavBar />
          </div>
-         <h2 className="text-center py-5 text-4xl font-bold mt-2">If there is the Feedback ?</h2>
-         <hr className="mb-5 mx-10" />
+         <ContactBox.ContactHeading/>
          <div className="contact flex flex-wrap justify-center gap-7">
-            <div className="max-w-md">
-               <img 
-                  src="https://5pworld.com/wp-content/uploads/shutterstock_1457403185-Converted-01-01.png" 
-                  alt="Contact Tshirts" />
-            </div>
+            <ContactBox.ContactImg/>
             <div className="flex flex-col">
-               <form>
+               <form onSubmit={formik.handleSubmit}>
                   <InputFrom.LabelInput
-                  label= "Fullname" type="text" name="fullname" placeholder="Andika Saputra" />
+                  label= "Fullname" type="text" name="fullname" id="fullname" placeholder="Andika Saputra" 
+                  value={formik.values.fullname}
+                  onChange={formik.handleChange}
+                  />
                   <InputFrom.LabelInput
-                  label= "Email Addres" type="email" name="Email" placeholder="andika@gmail.com" />
-                  <InputFrom.Textarea />
+                  label= "Email Addres" type="email" name="email" id="email" placeholder="andika@gmail.com" 
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  />
+                  <InputFrom.Textarea name="textarea"
+                  value={formik.values.textarea}
+                  onChange={formik.handleChange}
+                  />
                   <button color="bg-blue-500" type="submit"
                   >
                      Submit

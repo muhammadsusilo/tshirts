@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-import Button from "./Button"
 
 const InputFrom = (props) => {
    const {children} = props;
@@ -22,13 +20,14 @@ const LabelInput = (props) => {
    )
 }
 
-const Textarea =() => {
+const Textarea =(props) => {
+   const {name} = props;
    return (
       <div className="my-3 flex flex-col mb-6">
          <label htmlFor="textarea" className="font-medium">Textarea Suggestion</label>
          <textarea 
-         className="px-3 py-2 border border-slate-500 rounded outline-blue-400"
-         name="message" id="textarea" cols="40" rows="5">
+            className="px-3 py-2 border border-slate-500 rounded outline-blue-400"
+            name={name} id="textarea" cols="40" rows="5">
          </textarea>
       </div>
    )
