@@ -2,35 +2,29 @@ import InputFrom from "../components/Elements/Input";
 import HomeDasboard from "../components/Fragments/HomeDasboard";
 import React from 'react';
 import {useFormik} from 'formik';
-import * as Yup from "yup";
+// import * as Yup from "yup";
 import ContactBox from "../components/Fragments/ContactBox";
 
 const ContactPage = () => {
-   const formik = useFormik({
-   // initial values
-   initialValues:{
-      fullname:``,
-      email:``,
-      textarea:``
-   },
-   
-   // validation shema
-   validationSchema:Yup.object({
-      fullname:Yup.string()
-      .required(),
-      email:Yup.string()
-      .required(),
-      textarea:Yup.string()
-      .required(),
-   }),
+   const handleSubmit =() => {
+      // alert("submit form!")
 
-   // handle submission
-   onSubmit:(values) =>{
-      console.info("form values",values);
+      alert(formik.values.username)
    }
+   const formik = useFormik({
+      initialValues:{
+         fullname: "",
+         email:"",
+         textarea:""
+      },
    });
 
-// console.info(formik);
+   const HandleForm = (e) => {
+      const { target } = e
+      formik.setFieldValue("fullname", target.value)  
+   }
+
+
 
    return (
       <div className="contactpage">
@@ -41,20 +35,20 @@ const ContactPage = () => {
          <div className="contact flex flex-wrap justify-center gap-7">
             <ContactBox.ContactImg/>
             <div className="flex flex-col">
-               <form onSubmit={formik.handleSubmit}>
-                  <InputFrom.LabelInput
-                  label= "Fullname" type="text" name="fullname" id="fullname" placeholder="Andika Saputra" 
-                  value={formik.values.fullname}
-                  onChange={formik.handleChange}
+               <form onSubmit={handleSubmit}>
+                  <InputFrom.Label htmlFor="fullname">Fullname</InputFrom.Label>
+                  <Input type="text" id="fullname"name="fullname" placeholder ="Andika Saputra"
+                  onChange={HandleForm}
                   />
-                  <InputFrom.LabelInput
-                  label= "Email Addres" type="email" name="email" id="email" placeholder="andika@gmail.com" 
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
+
+                  <InputFrom.Label htmlFor="email">Email</InputFrom.Label>
+                  <Input type="text" id="email"name="email" placeholder ="andikasaputra@gmail.com"
+                  onChange={HandleForm}
                   />
+                  
+                  <InputFrom.Label htmlFor="textarea">Textarea Suggestion</InputFrom.Label>
                   <InputFrom.Textarea name="textarea"
-                  value={formik.values.textarea}
-                  onChange={formik.handleChange}
+                  onChange={HandleForm}
                   />
                   <button color="bg-blue-500" type="submit"
                   >

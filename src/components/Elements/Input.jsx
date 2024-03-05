@@ -8,23 +8,26 @@ const InputFrom = (props) => {
    )
 }
 
-const LabelInput = (props) => {
-   const {label,type,name,placeholder} =props;
+const Label = (props) => {
+   const {htmlFor, children} = props;
    return (
       <div className="my-3 flex flex-col">
-         <label htmlFor={name} className="font-medium">{label}</label>
-         <input  className="px-3 py-2 border border-slate-500 rounded outline-blue-400 "
-         type={type} id={name} name={name} placeholder={placeholder} 
-         />
+         <label htmlFor={htmlFor} className="font-medium">{children}</label>
       </div>
+)
+}
+const Input = (props) => {
+   const {type, name,placeholder}= props
+   return (
+      <input  className="px-3 py-2 border border-slate-500 rounded outline-blue-400 "
+      type={type} id={name} name={name} placeholder={placeholder} 
+      />
    )
 }
-
 const Textarea =(props) => {
    const {name} = props;
    return (
       <div className="my-3 flex flex-col mb-6">
-         <label htmlFor="textarea" className="font-medium">Textarea Suggestion</label>
          <textarea 
             className="px-3 py-2 border border-slate-500 rounded outline-blue-400"
             name={name} id="textarea" cols="40" rows="5">
@@ -33,7 +36,8 @@ const Textarea =(props) => {
    )
 }
 
-InputFrom.LabelInput = LabelInput;
+InputFrom.Label =  Label;
+InputFrom.Input = Input;
 InputFrom.Textarea = Textarea;
 
 export default InputFrom
