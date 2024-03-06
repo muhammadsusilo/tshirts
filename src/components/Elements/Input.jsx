@@ -1,5 +1,6 @@
+import { forwardRef } from "react";
 
-const InputFrom = (props) => {
+const InputForm = (props) => {
    const {children} = props;
    return (
          <div>
@@ -16,14 +17,14 @@ const Label = (props) => {
       </div>
 )
 }
-const Input = (props) => {
-   const {type, name,placeholder}= props
+const Input = forwardRef((props,ref) => {
+   const {type, name,placeholder}= props;
    return (
       <input  className="px-3 py-2 border border-slate-500 rounded outline-blue-400 "
-      type={type} id={name} name={name} placeholder={placeholder} 
+      type={type} id={name} name={name} placeholder={placeholder} ref={ref} 
       />
    )
-}
+})
 const Textarea =(props) => {
    const {name} = props;
    return (
@@ -36,8 +37,8 @@ const Textarea =(props) => {
    )
 }
 
-InputFrom.Label =  Label;
-InputFrom.Input = Input;
-InputFrom.Textarea = Textarea;
+InputForm.Label =  Label;
+InputForm.Input = Input;
+InputForm.Textarea = Textarea;
 
-export default InputFrom
+export default InputForm;
